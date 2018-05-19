@@ -22,7 +22,7 @@ namespace iEngine
                 Console.WriteLine("Usage: iengine <search-method> <FileName>.");
                 //Environment.Exit(1);
             }
-            string method = "FC";//args[0];
+            string method = "TT";//args[0];
             string path = "test1.txt";//args[1];
             
             if (ReadFromFile(path))

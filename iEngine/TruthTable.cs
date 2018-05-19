@@ -45,23 +45,7 @@ namespace iEngine
                 }
             }
         }
-        /// <summary>
-        /// find the column number of the variable
-        /// </summary>
-        /// <param name="var"></param>
-        /// <returns>column position of the variable</returns>
-        private int Indexof(string var)
-        {
-            for(int i = 0; i < _variables.Count; i++)
-            {
-                if (_variables[i].Equals(var))
-                {
-                    return i;
-                }
-            }
 
-            return Convert.ToInt32(null) ;
-        }
         /// <summary>
         /// prints the solution
         /// </summary>
@@ -118,12 +102,11 @@ namespace iEngine
 
                         for(int j = 0; j < lVars.Length; j++)
                         {
-                            
-                            varIndex[j] = Indexof(lVars[j]);
+                            varIndex[j] = _variables.IndexOf(lVars[j]);
                         }
                         for(int k = 0; k < currIndex.Length; k++)
                         {
-                            currIndex[k] = Indexof(rVars[k]);
+                            currIndex[k] = _variables.IndexOf(rVars[k]);
                         }
                         bool leftSide = false;
                         foreach(int col in varIndex)
@@ -157,7 +140,7 @@ namespace iEngine
                         int[] currIndex = new int[rVars.Length];
                         for(int k = 0; k < currIndex.Length; k++)
                         {
-                            currIndex[k] = Indexof(rVars[k]);
+                            currIndex[k] = _variables.IndexOf(rVars[k]);
                         }
                         foreach(int col in currIndex)
                         {
@@ -172,7 +155,7 @@ namespace iEngine
                 {
                     if (!_alpha.Contains("~"))
                     {
-                        if(!ReferenceEquals( Indexof(_alpha),null) && _truthTable[i,Indexof(_alpha)]){
+                        if(!ReferenceEquals(_variables.IndexOf(_alpha),null) && _truthTable[i, _variables.IndexOf(_alpha)]){
                             GetSolution(i); // testing purpose
                             count++;
                         }
@@ -185,7 +168,7 @@ namespace iEngine
                     else
                     {
                         string var = _alpha.Substring(1);
-                        if (!ReferenceEquals(Indexof(var), null) && !_truthTable[i, Indexof(var)])
+                        if (!ReferenceEquals(_variables.IndexOf(var), null) && !_truthTable[i, _variables.IndexOf(var)])
                         {
                             GetSolution(i); //testing purpose
                             count++;
