@@ -20,17 +20,17 @@ namespace iEngine
             if (args.Length < 2)
             {
                 Console.WriteLine("Usage: iengine <search-method> <FileName>.");
-                Environment.Exit(1);
+                //Environment.Exit(1);
             }
-            string method = args[0];
-            string path = args[1];
+            string method = "FC";//args[0];
+            string path = "test1.txt";//args[1];
             
             if (ReadFromFile(path))
             {
                 InferenceEngine engine = new InferenceEngine(_kb, _query);
 
                 engine.Solve(method);
-                //Console.ReadLine();
+                Console.ReadLine();
                Environment.Exit(0);
             }
 

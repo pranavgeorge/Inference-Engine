@@ -11,15 +11,15 @@ namespace iEngine
         private List<string> KB;
         private string _Query;
         private List<string> _variables;
-
+        
         public InferenceEngine(string kb,string query)
         {
             KB = new List<string>();
-            _variables = new List<string>();
+            _variables = new List<string>();// add present variables into the list
             if (kb.Contains(";"))
             {
-                kb = RemoveSpace(kb);
-                _Query = RemoveSpace(query);
+                kb = kb.Replace(" ", string.Empty);
+                _Query = query.Replace(" ", string.Empty);
             }
             char[] delimiters = new char[] { ';' };
             string[] kbValues = kb.Split(delimiters,StringSplitOptions.RemoveEmptyEntries);
@@ -49,21 +49,6 @@ namespace iEngine
                     }
                 }
             }
-        }
-        /// <summary>
-        /// remove all the space in the kb string passed
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        private string RemoveSpace(string str)
-        {
-            string[] items = str.Split(' ');
-            string result = "";
-            foreach(string item in items)
-            {
-                result += item;
-            }
-            return result;
         }
 
         /// <summary>
