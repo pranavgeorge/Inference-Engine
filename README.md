@@ -12,7 +12,7 @@ Features / Bugs / Missings
 - **Truth Table**:
     - Missing: only works with '&' and '=>' Conjunction
     - Bugs: None known.
-    * Features: You can ask it a negation using "~". (eg. ~a)
+    - Features: You can ask it a negation using "~". (eg. ~a)
     
 - **Forward Chaining**:
     - Missing: only works with '&' and '=>' Conjunction
