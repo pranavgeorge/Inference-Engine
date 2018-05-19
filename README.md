@@ -4,7 +4,7 @@ Inference engine for propositional logic on the Truth Table (TT) checking, and B
 
 Student Details:
 -------------------------------------------------------------------------------------------------------------
-- Pranav Gupta 	
+- Pranav Gupta 	101335790
 
 
 Features / Bugs / Missings
