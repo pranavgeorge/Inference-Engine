@@ -35,6 +35,9 @@ namespace iEngine
                 Console.WriteLine("NO:");
             }
         }
+        /// <summary>
+        /// calling this function will start the forward chaining algorithm and prints the result.
+        /// </summary>
         public override void Solve()
         {
             bool result = false;
@@ -71,7 +74,7 @@ namespace iEngine
                     if (items.Length == 2)
                     {
                         valid = true;
-                        
+                        // get and check the variable on the left hand side of the implementation
                         foreach (string Var in items[0].Split('&'))
                         {
                             //if the variable is not known the rule cant be proven
@@ -81,7 +84,7 @@ namespace iEngine
                                 break;
                             }
                         }
-
+                        
                         if (valid)
                         {
                             if (!_true.Contains(items[1]))//check if the _true list contains the implies value
@@ -97,12 +100,13 @@ namespace iEngine
                         }
                     }
                 }
+                // if can't prove any further break the loop
                 if (!added)
                 {
                     break;
                 }
             }
-            GetSolution(result);
+            GetSolution(result);// prints the solution
         }
     }
 }
