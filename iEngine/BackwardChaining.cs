@@ -59,9 +59,13 @@ namespace iEngine
                 Console.WriteLine("NO:");
             }
         }
+        /// <summary>
+        /// calling this function will start the Backward chaining algorithm and prints the result
+        /// </summary>
         public override void Solve()
         {
             bool result = false;
+            //if the query is already known to be true
             if (_true.Contains(_query))
             {
                 knowledgeBase.Add(_query);
@@ -79,7 +83,7 @@ namespace iEngine
         {
             bool result = false;
             char[] delimiters = new char[] { '=', '>' };
-
+            // for every rule in KB
             foreach (string clause in _kb)
             {
                 string[] items = clause.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
@@ -96,6 +100,7 @@ namespace iEngine
                         {
                             knowledgeBase.Add(clause);
                         }
+                        // every variable on the left side of implication
                         foreach (string val in items[0].Split('&'))
                         {
                             if (!_true.Contains(val))
@@ -106,7 +111,7 @@ namespace iEngine
                                     result = false;
                                     continue;
                                 }
-                                _true.Add(val);
+                                _true.Add(val); // add val to the true list
                             }
                             else
                             {
