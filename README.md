@@ -42,6 +42,12 @@ Test cases:
   ASK
   d
   
+  -**test4.txt**:
+  TELL
+  learn =>coding; practise & coding => experience;experience => professional;learn;practise;
+  ASK
+  professional
+  
 Research
 =============================================================================================================
 
