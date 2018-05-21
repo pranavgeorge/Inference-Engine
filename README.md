@@ -48,15 +48,14 @@ Test cases:
   ASK
   professional
   
-Research
-=============================================================================================================
-
-Output:
-------------------------------------------------------------------------------------------------------------
-
-
+  
 Acknowledgements/Resources: 
 =============================================================================================================
+I took the content from the book Artificial Intelligence A Modern Approach Third Edition to understand the concept of Forward Chaining, Backward chaining and Truth Table.
+I also went through the following lecture notes: 
+- Lecture 6 Logical Agents & Knowledge Representation
+- Lecture 7 Propositional Logic
+
 
 
 Notes: 
