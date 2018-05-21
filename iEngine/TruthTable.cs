@@ -69,17 +69,17 @@ namespace iEngine
         /// print the row number
         /// </summary>
         /// <param name="row"></param>
-        private void GetSolution(int row)
-        {
-            Console.Write("Row:" + row);
-            for (int col = 0; col < _variables.Count; col++)
-            {
-                string value = Convert.ToString(_truthTable[row, col]);
+        //private void GetSolution(int row)
+        //{
+        //    Console.Write("Row:" + row);
+        //    for (int col = 0; col < _variables.Count; col++)
+        //    {
+        //        string value = Convert.ToString(_truthTable[row, col]);
 
-                Console.Write(" " + _variables[col] + "=" + value);
-            }
-            Console.Write(Environment.NewLine);
-        }
+        //        Console.Write(" " + _variables[col] + "=" + value);
+        //    }
+        //    Console.Write(Environment.NewLine);
+        //}
         public override void Solve()
         {
             int count = 0;// number of times KB|= alpha
@@ -156,7 +156,7 @@ namespace iEngine
                     if (!_alpha.Contains("~"))
                     {
                         if(!ReferenceEquals(_variables.IndexOf(_alpha),null) && _truthTable[i, _variables.IndexOf(_alpha)]){
-                            GetSolution(i); // testing purpose
+                            //GetSolution(i); // testing purpose
                             count++;
                         }
                         else
@@ -170,7 +170,7 @@ namespace iEngine
                         string var = _alpha.Substring(1);
                         if (!ReferenceEquals(_variables.IndexOf(var), null) && !_truthTable[i, _variables.IndexOf(var)])
                         {
-                            GetSolution(i); //testing purpose
+                            //GetSolution(i); //testing purpose
                             count++;
                         }
                         else
