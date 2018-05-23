@@ -68,7 +68,7 @@ Notes:
 To run the project, from the command line locate to the following path:
 - iEngine\iEngine\bin\Debug
 - Then build the project to update the iEngine.exe file
-- iengine method fileName
+- type the following in command line to run the project: iengine method fileName
 
 Summary report:
 =============================================================================================================
