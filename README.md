@@ -78,3 +78,6 @@ Total task:
 2. Forward Chaining: it determines if the single proposition symbol the query(q) is entailed by a knowledge base for the definite clauses. It begins with the known facts which are already true in the knowledge base. If all the premises of an implication is known then its conclusion is added to the known facts. The process is continued until the query(q) is added to the known facts or until no inference can be made.
 
 3. Backwards Chaining: it works backward from the query. if the query is known to be true, then no need to perform further. Otherwise, the algorithm finds those implications in the knowledge base whose conclusion is q. If all the premises of one of those implications can be proved true (by backward chaining), then q is true. It works back down the graph until it reaches a set of known facts
+
+- **Contribution**: 
+All the task in this assignment were done individually by Pranav Gupta.
