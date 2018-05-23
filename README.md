@@ -55,11 +55,20 @@ I took the content from the book Artificial Intelligence A Modern Approach Third
 I also went through the following lecture notes: 
 - Lecture 6 Logical Agents & Knowledge Representation
 - Lecture 7 Propositional Logic
-
+- https://davidzych.com/converting-an-int-to-a-binary-string-in-c/
+	 print the string with a specific bit length, the PadLeft method in the .NET Framework. it will prepend the specified number of a character of your choosing to your string.
+- https://codereview.stackexchange.com/questions/145465/creating-truth-table-from-a-logical-statement
+	understanding the truthtable
+- https://people.cs.pitt.edu/~milos/courses/cs2740/Lectures/class6.pdf
+	forward chaining and backward chaining explanation and examples.
 
 
 Notes: 
 =============================================================================================================
+To run the project, from the command line locate to the following path:
+- iEngine\iEngine\bin\Debug
+Then build the project to update the iEngine.exe file
+iengine <method> <fileName>
 
 Summary report:
 =============================================================================================================
