@@ -40,13 +40,20 @@ namespace iEngine
         {
 
             List<string> inputRows = new List<string>();
-            StreamReader file = null;
-            file = new StreamReader(FileName);
             try
             {
-                for (int i = 0; i < 4; i++)
+                StreamReader file = null;
+                file = new StreamReader(FileName);
+                string line = file.ReadLine();
+                if (line.Equals("TELL")){
+                    inputRows.Add(file.ReadLine());
+                    _kb = inputRows[0];
+                }
+                line = file.ReadLine();
+                if (line.Equals("ASK"))
                 {
                     inputRows.Add(file.ReadLine());
+                    _query = inputRows[1];
                 }
                 file.Close();
             }
@@ -56,8 +63,6 @@ namespace iEngine
                 return false;
             }
             
-            _kb = inputRows[1];
-            _query = inputRows[3];
             return true;
 
         }
