@@ -12,7 +12,7 @@ Features / Bugs / Missings
 - **Truth Table**:
     - Missing: only works with '&' and '=>' Conjunction
     - Bugs: None known.
-    - Features: You can ask it a negation using "~". (eg. ~a)
+    - Features: You can ask using "~". (eg. ~d)
     
 - **Forward Chaining**:
     - Missing: only works with '&' and '=>' Conjunction
@@ -56,7 +56,7 @@ I also went through the following lecture notes:
 - Lecture 6 Logical Agents & Knowledge Representation
 - Lecture 7 Propositional Logic
 - https://davidzych.com/converting-an-int-to-a-binary-string-in-c/
-	 print the string with a specific bit length, the PadLeft method in the .NET Framework. it will prepend the specified number of a character of your choosing to your string.
+	 print the string with a specific bit length, the PadLeft method in the .NET Framework. it will prepend the specified number of 	 a character of your choosing to your string.
 - https://codereview.stackexchange.com/questions/145465/creating-truth-table-from-a-logical-statement
 	understanding the truthtable
 - https://people.cs.pitt.edu/~milos/courses/cs2740/Lectures/class6.pdf
@@ -67,13 +67,14 @@ Notes:
 =============================================================================================================
 To run the project, from the command line locate to the following path:
 - iEngine\iEngine\bin\Debug
-Then build the project to update the iEngine.exe file
-iengine method fileName
+- Then build the project to update the iEngine.exe file
+- iengine method fileName
 
 Summary report:
 =============================================================================================================
 Total task:
 1. Truth Table: truth table for all given variables, checks whether KB is true and counts how many times KB|=alpha.
+
 2. Forward Chaining: it determines if the single proposition symbol the query(q) is entailed by a knowledge base for the definite clauses. It begins with the known facts which are already true in the knowledge base. If all the premises of an implication is known then its conclusion is added to the known facts. The process is continued until the query(q) is added to the known facts or until no inference can be made.
 
 3. Backwards Chaining: it works backward from the query. if the query is known to be true, then no need to perform further. Otherwise, the algorithm finds those implications in the knowledge base whose conclusion is q. If all the premises of one of those implications can be proved true (by backward chaining), then q is true. It works back down the graph until it reaches a set of known facts
