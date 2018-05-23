@@ -1,4 +1,23 @@
-TELL
-p2=> p3; p3 => p1; c => e; b&e => f; f&g => h; p1=>d; p1&p3 => c; a; b; p2;
-ASK
-d
+- **test1.txt**:
+  TELL
+  p2=> p3; p3 => p1; c => e; b&e => f; f&g => h; p1=>d; p1&p3 => c; a; b; p2;
+  ASK
+  d
+  
+  - **test2.txt**:
+  TELL
+  p1&p2&p3=> p4; p5&p6 => p4; p1 => p2; p1&p2 => p3; p5&p7 => p6; p1; p4;
+  ASK
+  p7
+  
+  - **test3.txt**:
+  TELL
+  a=>b; c&d=>e; g&c=>a; f&a=>d; f&g=>c;f;g;
+  ASK
+  d
+  
+  - **test4.txt**:
+  TELL
+  learn =>coding; practise & coding => experience;experience => professional;learn;practise;
+  ASK
+  professional
