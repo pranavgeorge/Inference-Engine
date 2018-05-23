@@ -20,7 +20,7 @@ namespace iEngine
             if (args.Length < 2)
             {
                 Console.WriteLine("Usage: iengine <search-method> <FileName>.");
-                //Environment.Exit(1);
+                Environment.Exit(1);
             }
             string method = args[0];
             string path = args[1];
