@@ -39,20 +39,21 @@ namespace iEngine
 
             if (result)
             {
-                LinkedList<string> set = new LinkedList<string>();
+                HashSet<string> set = new HashSet<string>();
                 foreach (string item in knowledgeBase)
                 {
                     string[] val = item.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
                     if (val.Length == 1)
                     {
-                        set.AddFirst(val[0]);
+                        set.Add(val[0]);
                     }
                     else
                     {
-                        set.AddFirst(val[1]);
+                        set.Add(val[1]);
                     }
                 }
-                Console.WriteLine("Yes: " + string.Join(",", set));
+                
+                Console.WriteLine("Yes: " + string.Join(",", set.Reverse()));
             }
             else
             {
