@@ -85,6 +85,7 @@ namespace iEngine
             bool result = false;
             char[] delimiters = new char[] { '=', '>' };
             // for every rule in KB
+            START:
             foreach (string clause in _kb)
             {
                 string[] items = clause.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
@@ -110,7 +111,7 @@ namespace iEngine
                                 if (!Explore(val))
                                 {
                                     result = false;
-                                    continue;
+                                    goto START;
                                 }
                                 _true.Add(val); // add val to the true list
                             }
