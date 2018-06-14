@@ -52,7 +52,7 @@ namespace iEngine
                         set.Add(val[1]);
                     }
                 }
-                
+
                 Console.WriteLine("Yes: " + string.Join(",", set.Reverse()));
             }
             else
@@ -85,7 +85,8 @@ namespace iEngine
             bool result = false;
             char[] delimiters = new char[] { '=', '>' };
             // for every rule in KB
-            START:
+            //START:
+            bool added = false;
             foreach (string clause in _kb)
             {
                 string[] items = clause.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
@@ -111,14 +112,25 @@ namespace iEngine
                                 if (!Explore(val))
                                 {
                                     result = false;
-                                    goto START;
+                                    added = false;
+                                    break;//goto START;
                                 }
-                                _true.Add(val); // add val to the true list
+                                else
+                                {
+                                    _true.Add(val); // add val to the true list
+                                    added = true;
+                                }
+
                             }
                             else
                             {
                                 knowledgeBase.Add(val);
+                                added = true;
                             }
+                        }
+                        if (!added)
+                        {
+                            continue;
                         }
                         // all variable pass return true
                         result = true;
